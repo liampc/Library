@@ -42,3 +42,25 @@ h2 {
     padding: 20px;
 }
 
+.book-card{
+    display:flex;
+    flex-direction: row;
+    background-color: #ffffff63;
+    height: 40px;
+}
+
+.book-title {
+    width: 80%;
+    font-family: sans-serif;
+    padding: 10px;
+    
+}
+
+
+button, select{
+    background-color: white;
+    border-radius: 2px;
+    border: thin;
+    width: 80px;
+}
+
