@@ -8,8 +8,8 @@ function Book(){
 
 
 function addBooktoLibrary(book){
-    book = prompt("Give me a book")
-    myLibrary.push(book)
+    this.book = book
+    myLibrary.push(this.book)
 }
 
 addBooktoLibrary.prototype = Object.create(Book.prototype);
