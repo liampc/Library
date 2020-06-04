@@ -1,5 +1,6 @@
 body {
     background-image:url(library.jpg);
+   
 }
 
 h1 {
@@ -22,3 +23,22 @@ input {
     padding: 3px 5px 3px 10px;
     font-size: large;
 }
+
+.main-section {
+    background-color: #d6cbcba3;
+    width: 60vw;
+    margin: 5vh auto;
+}
+
+h2 {
+    text-align: center;
+    padding: 10px 20px 10px 20px;
+    font-family: 'B612', sans-serif;
+    font-size: x-large;
+    border-bottom: solid white 2px;
+}
+
+.books-section {
+    padding: 20px;
+}
+
