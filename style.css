@@ -47,6 +47,7 @@ h2 {
     flex-direction: row;
     background-color: #ffffff63;
     height: 40px;
+    margin-top: 5px;
 }
 
 .book-title {
