@@ -48,14 +48,14 @@ h2 {
     background-color: #ffffff63;
     height: 40px;
     margin-top: 5px;
+    font-family: 'B612',sans-serif;
+    padding: 5px 20px 5px 20px;
+    align-items: center;
+    font-size: 20px;
 }
 
-.book-title {
-    width: 80%;
-    font-family: sans-serif;
-    padding: 10px;
-    
-}
+
+
 
 
 button, select{
