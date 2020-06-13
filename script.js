@@ -1,5 +1,10 @@
 const bookList = document.querySelector(".books")
 const newBookBtn = document.querySelector("button");
+const titleForm = document.createElement("input");
+const authorForm = document.createElement("input");
+const statusSelect = document.createElement("select");
+const optRead = document.createElement("option");
+const optToRead = document.createElement("option");
 
 let myLibrary = ["BOOK1", "book2", "book3"];
 
@@ -29,11 +34,7 @@ function render(arr){
 }
 
 function newBook(){
-    let titleForm = document.createElement("input");
-    let authorForm = document.createElement("input");
-    let statusSelect = document.createElement("select");
-    let optRead = document.createElement("option");
-    let optToRead = document.createElement("option");
+    
     
 
     setAttr(titleForm, {"name":"title-form", "placeholder": "Title"});
