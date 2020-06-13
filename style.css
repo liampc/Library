@@ -11,23 +11,52 @@ h1 {
     margin: 10vh;
 }
 
-.input-section {
+.add-button {
    display: flex;
    justify-content: center;
+}
+
+button {
+    width: 10vw;
+    height: 30px;
+    background-color: white;
+    border-radius: 2px;
+    border: thin;
+}
+
+.input-section {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background-color: #d6cbcba3;
+   width:60vw;
+   margin: 5vh auto;
+   padding: 20px;
+
 }
 
 input {
     width: 40vw;
     height: 30px;
-    margin-right: 10px;
+    margin: 10px;
     padding: 3px 5px 3px 10px;
     font-size: large;
+}
+
+select {
+    width: 10vw;
+    height: 30px;
+    background-color: white;
+    border-radius: 2px;
+    border: thin;
 }
 
 .main-section {
     background-color: #d6cbcba3;
     width: 60vw;
     margin: 5vh auto;
+    padding: 20px;
 }
 
 h2 {
@@ -58,10 +87,4 @@ h2 {
 
 
 
-button, select{
-    background-color: white;
-    border-radius: 2px;
-    border: thin;
-    width: 80px;
-}
 
