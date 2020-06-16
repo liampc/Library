@@ -15,9 +15,12 @@ function Book(title,author,status){
 }
 
 
-function addBooktoLibrary(book){
-    this.book = book
-    myLibrary.push(this.book)
+function addBooktoLibrary(){
+    let title = titleForm.value
+    let author = authorForm.value
+    let status = statusSelect.value
+    myLibrary.push(title)
+    console.log(myLibrary)
 }
 
 addBooktoLibrary.prototype = Object.create(Book.prototype);
@@ -35,9 +38,7 @@ function render(arr){
     }
 }
 
-function newBook(){
-    
-    
+function showForms(){
 
     setAttr(titleForm, {"name":"title-form", "placeholder": "Title"});
     setAttr(authorForm, {"name":"author-form", "placeholder": "Author"});
@@ -51,7 +52,7 @@ function newBook(){
     statusSelect.options.add(optToRead, 1);
    
     document.querySelector(".input-section").append(titleForm, authorForm, statusSelect);
-    newBookBtn.removeEventListener("click", newBook)
+    newBookBtn.removeEventListener("click", showForms)
 }
 
 function setAttr(elem, attrs){
@@ -61,7 +62,7 @@ function setAttr(elem, attrs){
 }
 
 
-newBookBtn.addEventListener("click", newBook)
+newBookBtn.addEventListener("click", showForms)
 
 
 render(myLibrary)
