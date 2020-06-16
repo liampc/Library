@@ -8,8 +8,10 @@ const optToRead = document.createElement("option");
 
 let myLibrary = ["BOOK1", "book2", "book3"];
 
-function Book(){
-
+function Book(title,author,status){
+    this.title = title,
+    this.author = author,
+    this.status = status
 }
 
 
