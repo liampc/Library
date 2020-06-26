@@ -13,17 +13,19 @@
             <h1>My Library</h1>
         </div>
         <div class="input-section">
-            <button>Add New Book</button>
+            <button id="new-btn">Add New Book</button>
             <br>
-            <form>
-                <input type="text" name="add-title" id="input-title" placeholder="Title">
-                <input type="text" name="add-author" id="input-author" placeholder="Author">
-                <select id="status">
-                    <option value="To-Read">To Read</option>
-                    <option value="Read">Read</option>
-                </select>
-            </form>
-            <button id="save-btn">Save Book</button>
+            <div class="input-forms hidden">
+                <form>
+                    <input type="text" name="add-title" id="input-title" placeholder="Title">
+                    <input type="text" name="add-author" id="input-author" placeholder="Author">
+                    <select id="status">
+                        <option value="To-Read">To Read</option>
+                        <option value="Read">Read</option>
+                    </select>
+                </form>
+                <button id="save-btn">Save Book</button>
+            </div>
         </div>
         <div class="main-section">
             <h2>Books</h2>

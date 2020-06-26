@@ -33,7 +33,11 @@ h1 {
    
 }
 
-
+.input-forms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 form {
     width: 40vw;
@@ -67,4 +71,8 @@ span {
 .book-header {
     text-align: center;
     background-color:#b3afafd9;
+}
+
+.hidden {
+    display: none;
 }

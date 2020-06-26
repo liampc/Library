@@ -2,6 +2,7 @@ const inputTitle = document.querySelector("#input-title")
 const inputAuthor = document.querySelector("#input-author")
 const saveBtn = document.querySelector("#save-btn")
 const selectStatus = document.querySelector("#status")
+const newBookBtn = document.querySelector("#new-btn")
 
 
 let myLibrary = []
@@ -22,11 +23,13 @@ function addBooktoLibrary(){
     console.log(myLibrary)
     render()
     document.querySelector("form").reset();
+    document.querySelector(".input-forms").classList.add("hidden")
 }
 
 let harry = new Book("Harry Potter", "J.K Rowling", "To-Read")
 let harry2 = new Book("Harry Potter 2 ", "J.K Rowling", "To-Read")
 myLibrary.push(harry, harry2)
+render();
 
 function render(){
    let books = myLibrary.map(book => {
@@ -41,6 +44,13 @@ function render(){
    document.querySelector(".book-list").innerHTML = books
 }
 
-render();
 
+function showForms(){
+    document.querySelector(".input-forms").classList.remove("hidden")
+}
+
+
+
+
+newBookBtn.addEventListener("click", showForms)
 saveBtn.addEventListener("click", addBooktoLibrary)
