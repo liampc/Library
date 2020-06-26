@@ -20,6 +20,7 @@ function addBooktoLibrary(){
     let newBook = new Book(title,author,status)
     myLibrary.push(newBook)
     console.log(myLibrary)
+    render()
     document.querySelector("form").reset();
 }
 
@@ -29,9 +30,15 @@ myLibrary.push(harry, harry2)
 
 function render(){
    let books = myLibrary.map(book => {
-       return `${book.title} by ${book.author} status: ${book.status}`
-   })
-   console.log(books)
+       return `
+       <li class="book-card">
+                    <span> ${book.title} </span>
+                    <span>${book.author}</span>
+                    <span>${book.status}</span>
+                </li>
+       `
+   }).join("")
+   document.querySelector(".book-list").innerHTML = books
 }
 
 render();
