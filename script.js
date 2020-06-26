@@ -4,7 +4,7 @@ const saveBtn = document.querySelector("#save-btn")
 const selectStatus = document.querySelector("#status")
 
 
-let myLibrary = [];
+let myLibrary = []
 
 function Book(title,author,status){
     this.title = title,
@@ -22,5 +22,18 @@ function addBooktoLibrary(){
     console.log(myLibrary)
     document.querySelector("form").reset();
 }
+
+let harry = new Book("Harry Potter", "J.K Rowling", "To-Read")
+let harry2 = new Book("Harry Potter 2 ", "J.K Rowling", "To-Read")
+myLibrary.push(harry, harry2)
+
+function render(){
+   let books = myLibrary.map(book => {
+       return `${book.title} by ${book.author} status: ${book.status}`
+   })
+   console.log(books)
+}
+
+render();
 
 saveBtn.addEventListener("click", addBooktoLibrary)
