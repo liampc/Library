@@ -20,6 +20,7 @@ function addBooktoLibrary(){
     let newBook = new Book(title,author,status)
     myLibrary.push(newBook)
     console.log(myLibrary)
+    document.querySelector("form").reset();
 }
 
 saveBtn.addEventListener("click", addBooktoLibrary)
