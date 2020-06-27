@@ -80,7 +80,7 @@ function removeBook(e){
     let index = card.getAttribute("data-index")
     card.remove()
     myLibrary.splice(index,1);
-    console.log(myLibrary)
+    render();
 
 }
 
@@ -97,6 +97,6 @@ function changeStatus(e){
 }
 
 
-setBookIndex()
+
 newBookBtn.addEventListener("click", showForms)
 saveBtn.addEventListener("click", addBooktoLibrary)
