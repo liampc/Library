@@ -5,6 +5,7 @@ const selectStatus = document.querySelector("#status")
 const newBookBtn = document.querySelector("#new-btn")
 
 
+
 let myLibrary = []
 
 function Book(title,author,status){
@@ -50,17 +51,16 @@ function showForms(){
     document.querySelector(".input-forms").classList.remove("hidden")
 }
 
-function removeBook(){
+function setBookIndex(){
    let books = document.querySelectorAll(".book-card")
    for (let i = 0; i < myLibrary.length; i++){
-       books[i].setAttribute("data-book-index", i)
+       books[i].setAttribute("data-index", i)
     }
-   console.log(books.classList);
+
 }
 
 
 
-
-
+removeBook();
 newBookBtn.addEventListener("click", showForms)
 saveBtn.addEventListener("click", addBooktoLibrary)
