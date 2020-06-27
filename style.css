@@ -58,12 +58,12 @@ form {
 
 li {
     display: grid;
-    grid-template-columns: 2fr 2fr 1fr;
+    grid-template-columns: 2fr 2fr 1fr 25px;
     grid-template-rows:40px ;
 
 }
 
-span {
+span{
     border: white solid thin ;
     padding: 10px 20px 10px 20px;
 }

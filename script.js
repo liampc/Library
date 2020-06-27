@@ -38,6 +38,7 @@ function render(){
                     <span> ${book.title} </span>
                     <span>${book.author}</span>
                     <span>${book.status}</span>
+                    <button class="remove-btn"> x </button>
                 </li>
        `
    }).join("")
@@ -48,6 +49,15 @@ function render(){
 function showForms(){
     document.querySelector(".input-forms").classList.remove("hidden")
 }
+
+function removeBook(){
+   let books = document.querySelectorAll(".book-card")
+   for (let i = 0; i < myLibrary.length; i++){
+       books[i].setAttribute("data-book-index", i)
+    }
+   console.log(books.classList);
+}
+
 
 
 
