@@ -59,7 +59,22 @@ function setBookIndex(){
 
 }
 
-
+function removeBook(){
+    setBookIndex()
+    let section = document.querySelector(".main-section")
+    section.onclick = function(event){
+    let btn = event.target
+    
+    if (btn.className == "remove-btn"){
+        let card = event.target.closest(".book-card")
+        let index = card.getAttribute("data-index")
+        card.remove()
+        myLibrary.splice(index,1);
+        console.log(myLibrary)
+    }
+    
+   }
+}
 
 removeBook();
 newBookBtn.addEventListener("click", showForms)
