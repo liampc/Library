@@ -23,9 +23,13 @@ function addBooktoLibrary(){
     myLibrary.push(newBook)
     console.log(myLibrary)
     render()
+    resetForms();
+    setBookIndex()
+}
+
+function resetForms(){
     document.querySelector("form").reset();
     document.querySelector(".input-forms").classList.add("hidden")
-    setBookIndex()
 }
 
 let harry = new Book("Harry Potter", "J.K Rowling", "To-Read")
