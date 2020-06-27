@@ -25,6 +25,7 @@ function addBooktoLibrary(){
     render()
     document.querySelector("form").reset();
     document.querySelector(".input-forms").classList.add("hidden")
+    setBookIndex()
 }
 
 let harry = new Book("Harry Potter", "J.K Rowling", "To-Read")
@@ -38,7 +39,7 @@ function render(){
        <li class="book-card">
                     <span> ${book.title} </span>
                     <span>${book.author}</span>
-                    <span>${book.status}</span>
+                    <button class="status-btn">${book.status}</button>
                     <button class="remove-btn"> x </button>
                 </li>
        `
@@ -56,26 +57,40 @@ function setBookIndex(){
    for (let i = 0; i < myLibrary.length; i++){
        books[i].setAttribute("data-index", i)
     }
-
-}
-
-function removeBook(){
-    setBookIndex()
     let section = document.querySelector(".main-section")
     section.onclick = function(event){
     let btn = event.target
     
     if (btn.className == "remove-btn"){
-        let card = event.target.closest(".book-card")
-        let index = card.getAttribute("data-index")
-        card.remove()
-        myLibrary.splice(index,1);
-        console.log(myLibrary)
+        removeBook(btn)
     }
-    
-   }
+   
+    if (btn.className == "status-btn"){
+        changeStatus(btn)
+    }
+
+    }
 }
 
-removeBook();
+
+
+function removeBook(e){
+    let card = e.closest(".book-card")
+    let index = card.getAttribute("data-index")
+    card.remove()
+    myLibrary.splice(index,1);
+    console.log(myLibrary)
+
+}
+
+function changeStatus(e){
+    let card = e.closest(".book-card")
+    let index = card.getAttribute("data-index")
+    console.log(index);
+
+}
+
+
+setBookIndex()
 newBookBtn.addEventListener("click", showForms)
 saveBtn.addEventListener("click", addBooktoLibrary)
