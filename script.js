@@ -1,3 +1,4 @@
+
 const inputTitle = document.querySelector("#input-title")
 const inputAuthor = document.querySelector("#input-author")
 const saveBtn = document.querySelector("#save-btn")
@@ -68,8 +69,10 @@ function setBookIndex(){
         changeStatus(btn)
     }
 
+
     }
 }
+
 
 
 
@@ -92,6 +95,7 @@ function changeStatus(e){
         myLibrary[index].status = "Read"
     }
     render();
+
 }
 
 
@@ -105,3 +109,4 @@ let book1 = new Book("One Hundred Years of Solitude", "Gabriel Garcia Marquez", 
 let book2 = new Book("Kafka on the Shore", "Haruki Murakami", "Read")
 myLibrary.push(book1, book2)
 render();
+

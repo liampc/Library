@@ -26,6 +26,8 @@ h1 {
     display: flex;
     justify-content: center;
     margin: 20px;
+    padding: 10px;
+    border-bottom: #8080808a solid thin;
 }
 
 #new-btn {
@@ -46,6 +48,8 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 10px;
+    
 }
 
 
@@ -55,14 +59,21 @@ form {
     flex-direction: row;
     justify-content: space-around;
     margin: 0 auto;
+   
 }
 
 form > * {
     margin: 10px;
+    border: thin solid gray;
+    border-radius: 2px;
 }
 
-select {
-    width: 10vw;
+input {
+    width: 50vw;
+}
+
+select, option {
+    width: 50vw;
     height: 30px;
     background-color: white;
     border-radius: 2px;
@@ -73,7 +84,7 @@ select {
     height: 65vh;
     margin: 0 10px 0 10px;
     background-color:#f1f1f1b0;
-   
+    font-family: 'B612';
 }
 
 
