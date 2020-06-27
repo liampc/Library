@@ -29,7 +29,7 @@ function addBooktoLibrary(){
 }
 
 let harry = new Book("Harry Potter", "J.K Rowling", "To-Read")
-let harry2 = new Book("Harry Potter 2 ", "J.K Rowling", "To-Read")
+let harry2 = new Book("Harry Potter 2 ", "J.K Rowling", "Read")
 myLibrary.push(harry, harry2)
 render();
 
@@ -45,6 +45,7 @@ function render(){
        `
    }).join("")
    document.querySelector(".book-list").innerHTML = books
+   setBookIndex();
 }
 
 
@@ -86,8 +87,13 @@ function removeBook(e){
 function changeStatus(e){
     let card = e.closest(".book-card")
     let index = card.getAttribute("data-index")
-    console.log(index);
-
+    if (myLibrary[index].status == "Read"){
+        myLibrary[index].status = "To-Read"
+    }
+    else {
+        myLibrary[index].status = "Read"
+    }
+    render();
 }
 
 
