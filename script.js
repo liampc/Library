@@ -14,6 +14,9 @@ function Book(title,author,status){
     this.status = status
 }
 
+function showForms(){
+    document.querySelector(".input-forms").classList.remove("hidden")
+}
 
 function addBooktoLibrary(){
     let title = inputTitle.value;
@@ -21,7 +24,6 @@ function addBooktoLibrary(){
     let status = selectStatus.options[selectStatus.selectedIndex].value
     let newBook = new Book(title,author,status)
     myLibrary.push(newBook)
-    console.log(myLibrary)
     render()
     resetForms();
     setBookIndex()
@@ -32,10 +34,6 @@ function resetForms(){
     document.querySelector(".input-forms").classList.add("hidden")
 }
 
-let harry = new Book("Harry Potter", "J.K Rowling", "To-Read")
-let harry2 = new Book("Harry Potter 2 ", "J.K Rowling", "Read")
-myLibrary.push(harry, harry2)
-render();
 
 function render(){
    let books = myLibrary.map(book => {
@@ -52,10 +50,6 @@ function render(){
    setBookIndex();
 }
 
-
-function showForms(){
-    document.querySelector(".input-forms").classList.remove("hidden")
-}
 
 function setBookIndex(){
    let books = document.querySelectorAll(".book-card")
@@ -101,6 +95,13 @@ function changeStatus(e){
 }
 
 
-
 newBookBtn.addEventListener("click", showForms)
 saveBtn.addEventListener("click", addBooktoLibrary)
+
+
+//initial books
+
+let book1 = new Book("One Hundred Years of Solitude", "Gabriel Garcia Marquez", "Read")
+let book2 = new Book("Kafka on the Shore", "Haruki Murakami", "Read")
+myLibrary.push(book1, book2)
+render();
