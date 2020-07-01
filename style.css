@@ -68,7 +68,7 @@ form > * {
     border-radius: 2px;
 }
 
-input {
+#input-title, #input-author {
     width: 50vw;
 }
 
@@ -90,7 +90,7 @@ select, option {
 
 li {
     display: grid;
-    grid-template-columns: 2fr 2fr 1fr 25px;
+    grid-template-columns:  5% 35% 35% 20% 5%;
     grid-template-rows:40px ;
 
 }

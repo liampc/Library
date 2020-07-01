@@ -40,11 +40,12 @@ function render(){
    let books = myLibrary.map(book => {
        return `
        <li class="book-card">
+                   <input type="checkbox" name="checkbox">
                     <span> ${book.title} </span>
                     <span>${book.author}</span>
                     <button class="status-btn">${book.status}</button>
                     <button class="remove-btn"> x </button>
-                </li>
+        </li>
        `
    }).join("")
    document.querySelector(".book-list").innerHTML = books
@@ -109,4 +110,7 @@ let book1 = new Book("One Hundred Years of Solitude", "Gabriel Garcia Marquez", 
 let book2 = new Book("Kafka on the Shore", "Haruki Murakami", "Read")
 myLibrary.push(book1, book2)
 render();
+
+
+
 
