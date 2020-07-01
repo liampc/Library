@@ -40,7 +40,7 @@ function render(){
    let books = myLibrary.map(book => {
        return `
        <li class="book-card">
-                   <input type="checkbox" name="checkbox">
+                    <input type="checkbox" name="checkbox"class="checkbox">
                     <span> ${book.title} </span>
                     <span>${book.author}</span>
                     <button class="status-btn">${book.status}</button>
@@ -69,9 +69,12 @@ function setBookIndex(){
     if (btn.className == "status-btn"){
         changeStatus(btn)
     }
-
-
+    if (btn.className == "checkbox" || btn.className == "checkbox" && event.shiftKey){
+        selectCheckbox(event)
     }
+    
+    }
+
 }
 
 
@@ -98,6 +101,25 @@ function changeStatus(e){
     render();
 
 }
+
+function selectCheckbox(event){
+   let card = event.target.closest(".book-card")
+   let books = document.querySelector(".book-list");
+   let start;
+   let end;
+    if (event.shiftKey && !(card.classList.contains("checked"))){
+        card.classList.add("checked", "first")
+       
+   }
+   else if (!card.classList.contains("checked")){
+       card.classList.add("checked");
+   }
+   else card.classList.remove("checked")
+    
+    
+}
+
+
 
 
 newBookBtn.addEventListener("click", showForms)
