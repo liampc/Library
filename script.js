@@ -111,8 +111,11 @@ function saveToStorage(){
 
 function loadStorage(){
     let getBooks = JSON.parse(localStorage.getItem("myLibrary"));
-    myLibrary = getBooks;
-    render()
+    if (getBooks !== null){
+        myLibrary = getBooks
+        render()
+    }
+    
 }
 
 
