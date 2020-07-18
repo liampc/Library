@@ -95,6 +95,7 @@ function changeStatus(e){
     else {
         myLibrary[index].status = "Read"
     }
+    saveToStorage()
     render();
 
 }
