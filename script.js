@@ -81,6 +81,7 @@ function removeBook(e){
     let index = card.getAttribute("data-index")
     card.remove()
     myLibrary.splice(index,1);
+    saveToStorage()
     render();
 
 }
@@ -99,13 +100,19 @@ function changeStatus(e){
 }
 
 
+//local Storage
+
 function saveToStorage(){
     let bookStrings = JSON.stringify(myLibrary)
     localStorage.setItem("myLibrary", bookStrings);
-    console.log(localStorage);
 }
 
 
+function loadStorage(){
+    let getBooks = JSON.parse(localStorage.getItem("myLibrary"));
+    myLibrary = getBooks;
+    render()
+}
 
 
 
@@ -113,16 +120,17 @@ function saveToStorage(){
 newBookBtn.addEventListener("click", showForms)
 saveBtn.addEventListener("click", addBooktoLibrary)
 saveBtn.addEventListener("click", saveToStorage)
+window.addEventListener("load", loadStorage)
 
-//initial books
+//initial books 
 
-// let book1 = new Book("One Hundred Years of Solitude", "Gabriel Garcia Marquez", "Read")
-// let book2 = new Book("Kafka on the Shore", "Haruki Murakami", "Read")
-// myLibrary.push(book1, book2)
-// render();
+let book1 = new Book("One Hundred Years of Solitude", "Gabriel Garcia Marquez", "Read")
+let book2 = new Book("Kafka on the Shore", "Haruki Murakami", "Read")
+ myLibrary.push(book1, book2)
+render();
 
 
-// local storage
+
 
 
 
