@@ -99,14 +99,30 @@ function changeStatus(e){
 }
 
 
+function saveToStorage(){
+    let bookStrings = JSON.stringify(myLibrary)
+    localStorage.setItem("myLibrary", bookStrings);
+    console.log(localStorage);
+}
+
+
+
+
+
+
 newBookBtn.addEventListener("click", showForms)
 saveBtn.addEventListener("click", addBooktoLibrary)
-
+saveBtn.addEventListener("click", saveToStorage)
 
 //initial books
 
-let book1 = new Book("One Hundred Years of Solitude", "Gabriel Garcia Marquez", "Read")
-let book2 = new Book("Kafka on the Shore", "Haruki Murakami", "Read")
-myLibrary.push(book1, book2)
-render();
+// let book1 = new Book("One Hundred Years of Solitude", "Gabriel Garcia Marquez", "Read")
+// let book2 = new Book("Kafka on the Shore", "Haruki Murakami", "Read")
+// myLibrary.push(book1, book2)
+// render();
+
+
+// local storage
+
+
 
