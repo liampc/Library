@@ -52,4 +52,18 @@
 
       
     }
+
+
+    #new-btn {
+        position:absolute;
+        right: 1.5rem;
+        bottom: 1.5rem;
+        height: 5rem;
+        width: 5rem;
+        background-color: #92817a8f;
+        border-radius: 50px;
+        border: 6px solid $White;
+        font-size: 2.75rem;
+        color: $White;
+    }
 }

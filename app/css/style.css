@@ -102,4 +102,17 @@ a, a:visited, a:hover {
     width: 50%;
   }
 }
+
+.main #new-btn {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  height: 5rem;
+  width: 5rem;
+  background-color: #92817a8f;
+  border-radius: 50px;
+  border: 6px solid #FFFFFF;
+  font-size: 2.75rem;
+  color: #FFFFFF;
+}
 /*# sourceMappingURL=style.css.map */
