@@ -64,6 +64,15 @@ a, a:visited, a:hover {
   height: 4.124rem;
 }
 
+.main {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url("/library.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .main-sort {
   background-color: #E4DEDE;
   border-top: #92817A solid 1px;

@@ -11,7 +11,15 @@
 
 }
 
+
 .main {
+   
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url("/library.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 
 
     &-sort {
