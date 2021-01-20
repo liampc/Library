@@ -1,9 +1,35 @@
 .header {
+    background-color: $LightGray;
+    color: $Brown;
+    opacity: 0.7;
 
     h1 {
         text-align: center;
-        color: $Brown;
-        background-color: $LightGray;
         height: 4.124rem;
+    }
+
+    &-nav {
+        border-top: $Brown solid 1px;
+
+        a {
+            height: 2.375rem;
+            padding: 0.875rem 0.875rem;
+            color: $Brown;
+            
+
+            &:not(:last-child) {
+                border-right: $Brown;
+            }
+
+            &:hover {
+                background-color: $Brown;
+                color: $LightGray;
+                box-shadow: 0px 1px 1px 1px;
+            }
+        }
+
+        
+
+      
     }
 }

@@ -19,6 +19,12 @@ h1, h2 {
     margin: 0;
 }
 
+//links 
+
+a, a:visited, a:hover {
+    text-decoration: none;
+}
+
 
 //flexbox
 
@@ -29,8 +35,13 @@ h1, h2 {
         justify-content: center;
     }
 
+    &-jc-se {
+        justify-content: space-evenly;
+    }
+
     &-ai-c {
         align-items: center;
     }
+
 
 }
