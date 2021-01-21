@@ -172,6 +172,12 @@ a, a:visited, a:hover {
   width: 80%;
 }
 
+.overlay .input-forms form h2 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
 .overlay .input-forms form > * {
   padding: 0.625rem;
   margin: 0.3125rem;

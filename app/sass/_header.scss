@@ -40,6 +40,10 @@
             margin: 0 auto;
             width: 80%;
 
+            h2 {
+                align-self: center;
+            }
+
             > * {
                 padding: 0.625rem;
                 margin: 0.3125rem;
