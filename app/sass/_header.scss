@@ -27,12 +27,15 @@
         margin-top: 3.375rem;
         background-color: $White;
         border-radius: 6px;
+        
 
         @include breakpoint-up(medium){
             height: 35rem;
             width: 30rem;
         }
          
+
+        
     }
 
 }
