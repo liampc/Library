@@ -1,5 +1,5 @@
 .header {
-    
+    position: relative;
     color: $Brown;
     opacity: 0.7;
 
@@ -9,7 +9,19 @@
         height: 4.124rem;
     }
 
+    
+   
 }
+
+.overlay {
+
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background-image: linear-gradient($Brown, transparent);
+}
+
 
 
 .main {
@@ -55,7 +67,7 @@
 
 
     #new-btn {
-        position:absolute;
+        position:fixed;
         right: 1.5rem;
         bottom: 1.5rem;
         height: 5rem;
@@ -65,5 +77,6 @@
         border: 6px solid $White;
         font-size: 2.75rem;
         color: $White;
+        z-index: 1;
     }
 }

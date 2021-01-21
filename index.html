@@ -46,6 +46,7 @@
             My Library
         </h1>
     </header>
+    <div class="overlay fade-out"></div>
     <section class="main">
         <div class="container">
             <div class="main-sort flex flex-jc-se">
@@ -56,10 +57,22 @@
                 <a href="#">Date</a>
             </div>
         </div>
+        <div class="input-forms container">
+            <form>
+                <input type="text" name="add-title" id="input-title" placeholder="Title">
+                <input type="text" name="add-author" id="input-author" placeholder="Author">
+                <select id="status">
+                    <option value="To-Read">To Read</option>
+                    <option value="Read">Read</option>
+                </select>
+            </form>
+            <button id="save-btn">Save Book</button>
+        </div>
         <button id="new-btn">+</button>
     </section>
     
    
-    <script src="/app/js/script.js"></script>
+    <!-- <script src="/app/js/script.js"></script> -->
+    <script src="/app/js/style.js"></script>
 </body>
 </html>
