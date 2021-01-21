@@ -83,6 +83,21 @@ a, a:visited, a:hover {
   background-image: linear-gradient(#92817A, transparent);
 }
 
+.overlay .input-forms {
+  height: 25rem;
+  width: 20rem;
+  margin-top: 3.375rem;
+  background-color: #FFFFFF;
+  border-radius: 6px;
+}
+
+@media (min-width: 40rem) {
+  .overlay .input-forms {
+    height: 35rem;
+    width: 30rem;
+  }
+}
+
 .main {
   position: absolute;
   height: 100%;

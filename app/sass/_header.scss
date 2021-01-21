@@ -20,6 +20,21 @@
     width: 100%;
     z-index: 1;
     background-image: linear-gradient($Brown, transparent);
+
+    .input-forms {
+        height: 25rem;
+        width: 20rem;
+        margin-top: 3.375rem;
+        background-color: $White;
+        border-radius: 6px;
+
+        @include breakpoint-up(medium){
+            height: 35rem;
+            width: 30rem;
+        }
+         
+    }
+
 }
 
 
