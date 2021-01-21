@@ -242,4 +242,8 @@ a, a:visited, a:hover {
   color: #FFFFFF;
   z-index: 1;
 }
+
+.main #new-btn:hover {
+  background-color: #92817A;
+}
 /*# sourceMappingURL=style.css.map */
